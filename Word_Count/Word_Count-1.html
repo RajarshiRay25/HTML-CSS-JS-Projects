@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        *{
+            /* background-color: cadetblue; */
+            margin: 0;
+            padding: 0;
+        }
+        .head{
+            background-color: coral;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        .wordbox{
+            margin-top: 4px;
+            background-color: red;
+            /* height: 400px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+
+
+        }
+        .txt_ar{
+            /* font-size:medium; */
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .textarea{
+            background-color: silver;
+            font-size: medium;
+            
+        }
+        .btn{
+            background-color: springgreen;
+            size: 50px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+        .txt{
+            padding: 2px;
+            margin-top: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            size: 50px;
+        }
+        .foot{
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head"><h1>WELCOME TO THE WORD COUNTER</h1></div>
+    <div class="wordbox">
+        <form name="wordcount"> 
+            <div class="textarea">
+                <textarea class="txt_ar" name="wordcount1" id="count"  cols="90" rows="40"   ></textarea> <br>
+                <input class="btn" type="button" value= "CALCULATE WORDS" onClick="countword()">
+                <input class="txt" type="text" name="wordcount2" size="30">
+
+            </div>
+        </form>
+    </div>
+    <div class="foot"><footer>THANK YOU</footer></div>
+    <script>
+        function countword()
+        {
+            var word_no=document.wordcount.wordcount1.value
+            word_no=word_no.split(" ")
+            document.wordcount.wordcount2.value=word_no.length
+        }
+    </script>
+    
+</body>
+</html>
